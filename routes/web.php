@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\CameraController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +22,4 @@ Route::get('/pricing', [MainController::class, 'pricing']);
 Route::get('/services', [MainController::class, 'services']);
 Route::get('category/{any}', [MainController::class, 'showCategory'])->name('category.posts');
 Route::get('user/{id}',[MainController::class, 'showProfile'])->name('user.profile');
-
+Route::get('cam/{id}',[CameraController::class, 'cam']);
